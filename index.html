@@ -1,29 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MusicBridge.in — Book Artists, DJs & Orchestras</title>
+  <meta name="description" content="Book artists, musicians, orchestras, DJs, and contractors across India. First 2 bookings free for clients. Artists subscribe for promotion." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; margin:0; background:#f8fafc; color:#0f172a; }
+    header { background:#0f172a; color:white; padding:20px; text-align:center; }
+    header h1 { margin:0; font-size:28px; }
+    nav { background:#1e293b; padding:10px; text-align:center; }
+    nav a { color:white; margin:0 10px; text-decoration:none; font-weight:600; }
+    .container { max-width:1100px; margin:0 auto; padding:20px; }
+    h2 { margin-top:30px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; margin-top:16px; }
+    .card { background:white; padding:16px; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.1); }
+    .card img { width:100%; height:140px; object-fit:cover; border-radius:8px; }
+    .btn { display:inline-block; margin-top:10px; padding:10px 14px; border-radius:6px; background:#8b5cf6; color:white; text-decoration:none; font-weight:600; }
+    footer { margin-top:40px; background:#0f172a; color:white; padding:20px; text-align:center; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🎵 MusicBridge.in</h1>
+    <p>Book Artists • Musicians • DJs • Orchestras • Contractors</p>
+    <p>✨ Clients: First 2 bookings FREE • Artists: Subscribe for ₹2000+</p>
+  </header>
 
-import { useState } from "react";
-import { Header } from "./components/Header";
-import { HomePage } from "./components/HomePage";
-import { ArtistRegistration } from "./components/ArtistRegistration";
-import { ArtistBrowse } from "./components/ArtistBrowse";
+  <nav>
+    <a href="#cities">Top Cities</a>
+    <a href="#categories">Categories</a>
+    <a href="#artists">Artists</a>
+    <a href="#subscribe">Subscribe</a>
+  </nav>
 
-export default function App() {
-  const [currentView, setCurrentView] = useState('home');
+  <main class="container">
+    <section id="cities">
+      <h2>Top Cities</h2>
+      <div class="grid">
+        <div class="card"><img src="https://images.unsplash.com/photo-1541696432-82c6da8ce7bf?auto=format&fit=crop&w=800&q=60"><h3>Delhi</h3></div>
+        <div class="card"><img src="https://images.unsplash.com/photo-1505765058725-5f0b5a5d9e9b?auto=format&fit=crop&w=800&q=60"><h3>Mumbai</h3></div>
+        <div class="card"><img src="https://images.unsplash.com/photo-1526481280698-8f1e5a6a5b1e?auto=format&fit=crop&w=800&q=60"><h3>Bengaluru</h3></div>
+        <div class="card"><img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=60"><h3>Hyderabad</h3></div>
+      </div>
+    </section>
 
-  const renderView = () => {
-    switch (currentView) {
-      case 'register':
-        return <ArtistRegistration onViewChange={setCurrentView} />;
-      case 'browse':
-        return <ArtistBrowse onViewChange={setCurrentView} />;
-      default:
-        return <HomePage onViewChange={setCurrentView} />;
-    }
-  };
+    <section id="categories">
+      <h2>Categories</h2>
+      <div class="grid">
+        <div class="card"><h3>🎤 Artists</h3></div>
+        <div class="card"><h3>🎶 Musicians</h3></div>
+        <div class="card"><h3>🥁 Orchestras</h3></div>
+        <div class="card"><h3>🎧 DJs</h3></div>
+        <div class="card"><h3>👷 Contractors</h3></div>
+      </div>
+    </section>
 
-  return (
-    <div className="min-h-screen bg-background">
-      <Header currentView={currentView} onViewChange={setCurrentView} />
-      {renderView()}
-    </div>
-  );
-}
+    <section id="artists">
+      <h2>Featured Artists</h2>
+      <div class="grid">
+        <div class="card"><img src="https://images.unsplash.com/photo-1507878866276-a947ef722fee?auto=format&fit=crop&w=800&q=60"><h3>Bollywood Beats</h3><p>Delhi • ₹40,000</p><a href="#" class="btn">Book</a></div>
+        <div class="card"><img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=60"><h3>DJ Neon</h3><p>Bengaluru • ₹30,000</p><a href="#" class="btn">Book</a></div>
+        <div class="card"><img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=60"><h3>Sargam Trio</h3><p>Kolkata • ₹25,000</p><a href="#" class="btn">Book</a></div>
+      </div>
+    </section>
 
+    <section id="subscribe">
+      <h2>Artist Subscription Plans</h2>
+      <div class="grid">
+        <div class="card"><h3>6 Months</h3><p>₹2000 • PAN India Promotion</p><a href="#" class="btn">Subscribe</a></div>
+        <div class="card"><h3>1 Year</h3><p>₹3500 • Priority Promotion</p><a href="#" class="btn">Subscribe</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 MusicBridge.in — Demo Site | Built for Clients & Artists</p>
+  </footer>
+</body>
+</html>
