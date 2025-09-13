@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>MusicBridge — Book Artists, DJs & Orchestras</title>
+<meta name="description" content="MusicBridge.in — Book live artists, DJs and bands for events across India. First 2 bookings free for clients. Artists subscribe to showcase." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--accent:#8b5cf6;--accent-2:#06b6d4;--muted:#6b7280;--card:#fff;--bg:#f8fafc}
+*{box-sizing:border-box}
+body{font-family:Inter, system-ui, Arial; margin:0;background:var(--bg);color:#0f172a}
+.container{max-width:1100px;margin:0 auto;padding:20px}
+header{background:linear-gradient(90deg,#0f172a,#071130);color:white;padding:34px 20px}
+header h1{margin:0;font-size:26px}
+header p{margin:6px 0 0;color:rgba(255,255,255,0.9)}
+
+
+.hero{display:grid;gap:18px;align-items:center;grid-template-columns:1fr 360px;margin-top:18px}
+@media(max-width:900px){.hero{grid-template-columns:1fr;}}
+.hero-card{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));padding:22px;border-radius:12px;color:white}
+.cta{display:flex;gap:10px;align-items:center}
+.btn{padding:10px 14px;border-radius:9px;border:none;cursor:pointer;font-weight:600}
+.btn-primary{background:var(--accent);color:white}
+.btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.12);color:white}
+
+
+.searchbar{display:flex;gap:8px;margin-top:12px}
+input,select,textarea{padding:10px;border-radius:8px;border:1px solid #e6e6f0}
+
+
+.section{margin-top:26px}
+h2{margin:0 0 8px 0}
+.grid{display:grid;gap:16px}
+.cities{grid-template-columns:repeat(auto-fit,minmax(160px,1fr));display:grid}
+.city{background:var(--card);border-radius:10px;overflow:hidden;box-shadow:0 6px 18px rgba(15,23,42,0.06)}
+.city img{width:100%;height:120px;object-fit:cover;display:block}
+.city .meta{padding:10px}
+
+
+.categories{display:flex;gap:10px;flex-wrap:wrap}
+.cat{padding:10px 12px;background:white;border-radius:10px;box-shadow:0 6px 18px rgba(15,23,42,0.04);cursor:pointer}
+
+
+.artists{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:12px}
+.card{background:var(--card);border-radius:12px;padding:14px;box-shadow:0 6px 18px rgba(15,23,42,0.06)}
+.photo{height:140px;border-radius:8px;background:#f1f5f9;display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--muted)}
+.artist-meta{margin-top:10px}
+.small{font-size:13px;color:var(--muted)}
+
+
+.promo{display:flex;align-items:center;justify-content:space-between;padding:12px;border-radius:10px;background:linear-gradient(90deg,rgba(139,92,246,0.12),rgba(6,182,212,0.06));}
+
+
+footer{padding:28px 20px;text-align:center;color:var(--muted);font-size:14px;margin-top:30px}
+
+
+/* modal */
+.modal-backdrop{position:fixed;inset:0;background:rgba(2,6,23,0.5);display:flex;align-items:center;justify-content:center;padding:20px;z-index:90}
+.modal{background:white;border-radius:12px;max-width:720px;width:100%;padding:18px}
+
+
+.flex{display:flex;gap:12px;align-items:center}
+.right{justify-content:flex-end}
